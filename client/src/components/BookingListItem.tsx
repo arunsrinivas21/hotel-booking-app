@@ -3,32 +3,9 @@ import { Card, Grid, Image, Header, Modal, List, Button, Segment } from "semanti
 import { Hotel, HotelsListApiResponse, HotelApiResponse } from "../types";
 import axios, { AxiosResponse } from "axios";
 import { toast } from 'react-toastify'
+import { Link } from "react-router-dom";
 
-interface HotelListItemProps {
-  name: string;
-  location: string;
-  distance: string;
-  amenities: string[];
-  rating: number;
-  reviews: number;
-  originalPrice: number;
-  discountedPrice: number;
-  taxes: number;
-  image: string;
-}
-
-const HotelListItem: React.FC<HotelListItemProps> = ({
-  name,
-  location,
-  distance,
-  amenities,
-  rating,
-  reviews,
-  originalPrice,
-  discountedPrice,
-  taxes,
-  image,
-}) => {
+const HotelListItem: React.FC = () => {
   const [hotelsData, setHotelsData] = useState<Array<Hotel> | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
@@ -64,6 +41,12 @@ const HotelListItem: React.FC<HotelListItemProps> = ({
 
   return (
     <div style={{ marginTop: '20px' }}>
+      <Link to='/'>
+        <Button 
+          content='&lt; Back to Hotels List'
+          color='blue'
+        />
+      </Link>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {hotelsData ? (
@@ -72,7 +55,7 @@ const HotelListItem: React.FC<HotelListItemProps> = ({
           return (
             <Grid stackable style={{ padding: '10px' }} key={hotel?.id}>
               <Grid.Column width={4}>
-                <Image src={image} fluid style={{ maxWidth: '100%' }} />
+                <Image src={'./hotel1.jpg'} fluid style={{ maxWidth: '100%' }} />
               </Grid.Column>
 
               <Grid.Column width={8} style={{}}>

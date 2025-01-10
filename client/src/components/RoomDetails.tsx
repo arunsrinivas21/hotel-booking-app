@@ -36,7 +36,7 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
 
-  const { checkInDate, checkOutDate, numberOfPersons, numberOfRooms, setCheckInDate, setCheckOutDate, setNumberOfPersons, setNumberOfRooms } = useAppContext();
+  const { checkInDate, checkOutDate, numberOfPersons, numberOfRooms, setCheckInDate, setCheckOutDate, setNumberOfPersons, setNumberOfRooms, setSelectedFilterLocation } = useAppContext();
 
   useEffect(() => {
     if (params.roomId) {
@@ -191,6 +191,7 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
                       setCheckOutDate('');
                       setNumberOfPersons(1);
                       setNumberOfRooms(1);
+                      setSelectedFilterLocation('');
                       navigate('/');
                       return;
                     } catch (err: any) {

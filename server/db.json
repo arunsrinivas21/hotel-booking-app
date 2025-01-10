@@ -102,7 +102,14 @@
       "roomsStatus": "Last 2 rooms available",
       "googleMapsUrl": "https://www.google.com/travel/hotels/s/hoqN9t31k5kb8Ykf7",
       "category": "5 stars",
-      "bedType": "1 queen size bed + 1 single bed"
+      "bedType": "1 queen size bed + 1 single bed",
+      "bookingStatus": true,
+      "bookDetails": {
+        "checkInDate": "2025-02-10",
+        "checkOutDate": "2025-02-15",
+        "numberOfPersons": 2,
+        "numberOfRooms": 1
+      }
     },
     {
       "id": "341dcc93-09fc-4bec-a7f3-62e9c0b65b76",
@@ -137,7 +144,14 @@
       "roomsStatus": "54 rooms available",
       "googleMapsUrl": "https://maps.app.goo.gl/AM4qda6hzBMu4Bz48",
       "category": "3 stars",
-      "bedType": "1 double bed"
+      "bedType": "1 double bed",
+      "bookingStatus": true,
+      "bookDetails": {
+        "checkInDate": "2025-01-16",
+        "checkOutDate": "2025-01-23",
+        "numberOfPersons": 3,
+        "numberOfRooms": 2
+      }
     }
   ]
 }
