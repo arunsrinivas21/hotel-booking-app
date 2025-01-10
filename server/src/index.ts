@@ -125,6 +125,26 @@ app.post("/hotels", async (req: Request, res: Response) => {
   res.status(201).json(newHotel);
 });
 
+// 6. Delete a hotel object from DB
+app.delete("/hotels/:id", async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  await db.read();
+  if (db.data && db.data.hotels) {
+    const initialHotelCount = db.data.hotels.length;
+    db.data.hotels = db.data.hotels.filter(h => h.id !== id);
+
+    if (db.data.hotels.length < initialHotelCount) {
+      await db.write();
+      res.json({ message: "Hotel removed successfully" });
+    } else {
+      res.status(404).json({ error: "Hotel not found" });
+    }
+  } else {
+    res.status(500).json({ error: "Database error" });
+  }
+});
+
 // Start the server
 app.listen(PORT, async () => {
   await initializeDatabase();

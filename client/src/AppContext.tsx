@@ -1,21 +1,20 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-// Define the types for the context state
 interface AppContextType {
   checkInDate: string;
   checkOutDate: string;
   numberOfPersons: number;
   numberOfRooms: number;
+  selectedFilterLocation: string;
   setCheckInDate: (date: string) => void;
   setCheckOutDate: (date: string) => void;
   setNumberOfPersons: (count: number) => void;
   setNumberOfRooms: (count: number) => void;
+  setSelectedFilterLocation: (location: string) => void;
 }
 
-// Create the context with a default value
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
-// Define the provider component
 interface AppContextProviderProps {
   children: ReactNode;
 }
@@ -26,6 +25,7 @@ export const AppContextProvider: React.FC<AppContextProviderProps> = ({ children
   const [checkOutDate, setCheckOutDate] = useState<string>('');
   const [numberOfPersons, setNumberOfPersons] = useState<number>(1);
   const [numberOfRooms, setNumberOfRooms] = useState<number>(1);
+  const [selectedFilterLocation, setSelectedFilterLocation] = useState<string>('');
 
   // The context value
   const value = {
@@ -33,10 +33,12 @@ export const AppContextProvider: React.FC<AppContextProviderProps> = ({ children
     checkOutDate,
     numberOfPersons,
     numberOfRooms,
+    selectedFilterLocation,
     setCheckInDate,
     setCheckOutDate,
     setNumberOfPersons,
     setNumberOfRooms,
+    setSelectedFilterLocation,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

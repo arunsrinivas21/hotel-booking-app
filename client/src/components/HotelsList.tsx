@@ -3,6 +3,7 @@ import { Card, Icon, Image, Label, Button, Grid, Header } from 'semantic-ui-reac
 import { Link } from 'react-router-dom';
 import axios, { AxiosResponse } from 'axios';
 import { HotelsListApiResponse, Hotel } from '../types';
+import { useAppContext } from '../AppContext';
 import './HotelsList.css';
 
 const HotelList: React.FC = () => {
@@ -10,13 +11,22 @@ const HotelList: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
 
+  const { selectedFilterLocation } = useAppContext();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
         const response: AxiosResponse<HotelsListApiResponse> = await axios.get("http://localhost:5000/hotels");
         console.log(response.data, 'arun')
-        setHotelsData(response.data.data);
+        if (selectedFilterLocation !== '') {
+          const filteredHotels = response.data.data.filter((hotel: Hotel) => {
+            return hotel.location.toLowerCase() === selectedFilterLocation.toLowerCase();
+          });
+          setHotelsData(filteredHotels);
+        } else {
+          setHotelsData(response.data.data);
+        }
       } catch (err: any) {
         setError("Failed to fetch data");
         setHotelsData(null);
@@ -26,7 +36,7 @@ const HotelList: React.FC = () => {
     };
 
     fetchData();
-  }, []);
+  }, [selectedFilterLocation]);
 
   return (
     <div>
@@ -37,7 +47,7 @@ const HotelList: React.FC = () => {
           {hotelsData.map((hotel: Hotel, index: number) => (
             <Grid.Column key={index}>
               <Card fluid className="hotel-card">
-                <Image src={`hotel${index+1}.jpg`} wrapped ui={false} alt={hotel.name} />
+                <Image src={`hotel${index+1 <= 8 ? index+1 : 1}.jpg`} wrapped ui={false} alt={hotel.name} />
                 <Card.Content className="card-content">
                   <Card.Header>
                     {hotel.name}
@@ -54,7 +64,7 @@ const HotelList: React.FC = () => {
                     </p>
                     <p>{hotel.roomStatus}</p>
                     <div className='hotel-price'>
-                      {hotel.price ? hotel.price : <>&nbsp;</>}
+                      {hotel.price ? hotel.price + ' INR' : <>&nbsp;</>}
                     </div>
                   </Card.Description>
                 </Card.Content>

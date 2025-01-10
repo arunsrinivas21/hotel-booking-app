@@ -1,16 +1,17 @@
 import React, { useState} from 'react';
 import { Grid, Dropdown } from 'semantic-ui-react';
+import { useAppContext } from '../AppContext';
 
 const Filters: React.FC = () => {
-  const [filterLocation, setFilterLocation] = useState(''); 
+  const { selectedFilterLocation, setSelectedFilterLocation } = useAppContext();
 
   const locations = [
+    { key: 'All', text: 'All', value: '' },
     { key: 'Chennai', text: 'Chennai', value: 'Chennai' },
     { key: 'Bangalore', text: 'Bangalore', value: 'Bangalore' },
     { key: 'Hyderabad', text: 'Hyderabad', value: 'Hyderabad' },
     { key: 'Mumbai', text: 'Mumbai', value: 'Mumbai' },
     { key: 'Delhi', text: 'Delhi', value: 'Delhi' },
-    { key: 'Indore', text: 'Indore', value: 'Indore' },
   ];
 
   return (
@@ -23,8 +24,8 @@ const Filters: React.FC = () => {
             fluid 
             selection 
             options={locations} 
-            value={filterLocation} 
-            onChange={(e, { value }) => setFilterLocation(value as string)}
+            value={selectedFilterLocation} 
+            onChange={(e, { value }) => setSelectedFilterLocation(value as string)}
           />
         </span>
       </Grid.Column>

@@ -20,63 +20,6 @@
       "id": "1ca0fbac-0cfd-426b-aff9-0ad80de30b82"
     },
     {
-      "name": "Chennai Royal Hotels",
-      "description": "Located in the heart of the Chennai city, Chennai Royal Hotels offers top-notch facilities such as an in-house lounge with a bar and pool, a 24-hour cafe and luxe rooms",
-      "price": 20000,
-      "location": "Chennai",
-      "address": "Guindy, Chennai",
-      "facilities": [
-        "Swimming Pool",
-        "Gym",
-        "Bar",
-        "Conference Rooms",
-        "City-Wide View"
-      ],
-      "roomsStatus": "5 rooms available",
-      "googleMapsUrl": "https://maps.app.goo.gl/kHat694Fxbhx7kav7",
-      "category": "4 stars",
-      "bedType": "1 queen size bed",
-      "id": "9c5bb7b2-e546-4d22-b0d6-e98c561c36ef"
-    },
-    {
-      "name": "Chennai Royal Hotels",
-      "description": "Located in the heart of the Chennai city, Chennai Royal Hotels offers top-notch facilities such as an in-house lounge with a bar and pool, a 24-hour cafe and luxe rooms",
-      "price": 20000,
-      "location": "Chennai",
-      "address": "Guindy, Chennai",
-      "facilities": [
-        "Swimming Pool",
-        "Gym",
-        "Bar",
-        "Conference Rooms",
-        "City-Wide View"
-      ],
-      "roomsStatus": "5 rooms available",
-      "googleMapsUrl": "https://maps.app.goo.gl/kHat694Fxbhx7kav7",
-      "category": "4 stars",
-      "bedType": "1 queen size bed",
-      "id": "ae063f7c-e8dc-4b6e-90af-aeeb577367e2"
-    },
-    {
-      "name": "Chennai Royal Hotels",
-      "description": "Located in the heart of the Chennai city, Chennai Royal Hotels offers top-notch facilities such as an in-house lounge with a bar and pool, a 24-hour cafe and luxe rooms",
-      "price": 20000,
-      "location": "Chennai",
-      "address": "Guindy, Chennai",
-      "facilities": [
-        "Swimming Pool",
-        "Gym",
-        "Bar",
-        "Conference Rooms",
-        "City-Wide View"
-      ],
-      "roomsStatus": "5 rooms available",
-      "googleMapsUrl": "https://maps.app.goo.gl/kHat694Fxbhx7kav7",
-      "category": "4 stars",
-      "bedType": "1 queen size bed",
-      "id": "516b0792-2178-4c97-8433-4438cb279ca9"
-    },
-    {
       "id": "ec894c76-3269-4b55-b906-e39b55118fc1",
       "name": "Bangalore City Gate Hotel",
       "description": "Located in the heart of the Chennai city, Chennai Royal Hotels offers top-notch facilities such as an in-house lounge with a bar and pool, a 24-hour cafe and luxe rooms",
@@ -96,31 +39,105 @@
       "bedType": "1 queen size bed + 1 single bed",
       "bookingStatus": true,
       "bookDetails": {
-        "checkInDate": "2025-01-16",
-        "checkOutDate": "2025-01-24",
-        "numberOfPersons": 2,
+        "checkInDate": "2025-01-22",
+        "checkOutDate": "2025-01-31",
+        "numberOfPersons": 1,
         "numberOfRooms": 1
       }
     },
     {
-      "id": "9f69ce7c-3cac-4bee-bba3-981dc4b2fd5e",
-      "name": "Madurai Meenakshi Hotel",
-      "description": "Located in the heart of the temple city, Madurai Meenakshi Hotel is of the best hotels in the city for a quality and luxurious stay. Equipped with gyms, spas, unlimited buffets, yoga bars and night clubs, you are in for a treat from the word go.",
-      "price": 49999,
-      "location": "Madurai",
-      "address": "Meenakshi Amman Street, Bangalore",
+      "id": "cb3565ad-8572-4f3c-aa7d-64a8a1789424",
+      "name": "Raja Annamalai Hotel",
+      "description": "Located in the Holy land of Hyderabad, this hotel is a recently upgraded 5 star hotel with luxury as a way of life. Chaffers, assistants, attendants, instructors are also available during your stay. Book now for a cosy stay ",
+      "price": 25000,
+      "location": "Hyderabad",
+      "address": "Garden Road, Hyderabad, Telangana - 561203",
       "facilities": [
-        "Gym",
-        "Bar",
-        "24*7 Security",
-        "Yoga Bars",
-        "Spas",
-        "Disco Bars"
+        "15 different cuisines",
+        "Dry Cleaning Service",
+        "Wi Fi",
+        "Free Breakfast",
+        "Smoking Rooms"
       ],
-      "roomsStatus": "17 rooms available in different floors",
-      "googleMapsUrl": "https://maps.app.goo.gl/kHat694Fxbhx7kav7",
+      "roomsStatus": "5 rooms available",
+      "googleMapsUrl": "https://maps.app.goo.gl/kNhtyMWWiHzNmN3n8",
       "category": "5 stars",
-      "bedType": "2 single beds or 1 queen size bed"
+      "bedType": "1 queen size bed + 2 single beds"
+    },
+    {
+      "id": "4e672657-3522-4230-a902-ef8b738a1aae",
+      "name": "Delhi Palace",
+      "description": "The Captial of India has a new landmark called Delhi Palace. Just a 5-minute walk from the Central Railway Station. Towels and bed linen are featured in the homestay. The property offers beautiful views.",
+      "price": 60000,
+      "location": "Delhi",
+      "address": "SVP Road, New Delhi - 502938",
+      "facilities": [
+        "Private Kitchens",
+        "Chef-Special Every Day",
+        "Wi Fi",
+        "Massage Centers",
+        "Spa Rooms",
+        "Family Rooms",
+        "Smoking Spaces"
+      ],
+      "roomsStatus": "10 rooms available",
+      "googleMapsUrl": "https://maps.app.goo.gl/37bvTTb9DLjj3mARA",
+      "category": "5 stars",
+      "bedType": "Full Bed - Customizable"
+    },
+    {
+      "id": "37050d53-d8a1-4b81-9d16-9a524a8251ab",
+      "name": "Maha Crown Hotel",
+      "description": "The Financial Captial of India has a crown in it - The Maha Crown Hotel. This hotel makes you feel alive in the heart of the city as the hotel is just 10 mins drive from the airport.",
+      "price": 99999,
+      "location": "Mumbai",
+      "address": "Bajaj Street, AC Bhavan Opposite, Mumbai - 431022",
+      "facilities": [
+        "Peninsula Waterloos",
+        "Water Rides",
+        "Private Wi Fi",
+        "Mobile Juice Centers",
+        "Roman Designs"
+      ],
+      "roomsStatus": "Last 2 rooms available",
+      "googleMapsUrl": "https://www.google.com/travel/hotels/s/hoqN9t31k5kb8Ykf7",
+      "category": "5 stars",
+      "bedType": "1 queen size bed + 1 single bed"
+    },
+    {
+      "id": "341dcc93-09fc-4bec-a7f3-62e9c0b65b76",
+      "name": "Chennai Plaza Hotel",
+      "description": "Overlooking the beach, this stately hotel with a Colonial-style exterior is 8 km from the Valluvar Kottam monument and 10 km from Chennai Central railway station.",
+      "price": 19999,
+      "location": "Chennai",
+      "address": "Anna Salai, Chennai - 600001",
+      "facilities": [
+        "Free Parking",
+        "Free Breakfast",
+        "Wheelchair Accessible",
+        "Wi-Fi"
+      ],
+      "roomsStatus": "12 rooms available",
+      "googleMapsUrl": "https://maps.app.goo.gl/6DrBYPUqUsCGBfm36",
+      "category": "4 stars",
+      "bedType": "1 queen size bed"
+    },
+    {
+      "id": "8a491eb0-c408-4d6e-bcda-cde1bd86ebac",
+      "name": "Satvik Hotel",
+      "description": "Just 2-mins walk from Chennai Airport, this hotel is best for people want a layover in Chennai",
+      "price": 6999,
+      "location": "Chennai",
+      "address": "GST Road, Chennai - 092831",
+      "facilities": [
+        "Free Parking",
+        "Cab Facility at Request",
+        "Wi-Fi"
+      ],
+      "roomsStatus": "54 rooms available",
+      "googleMapsUrl": "https://maps.app.goo.gl/AM4qda6hzBMu4Bz48",
+      "category": "3 stars",
+      "bedType": "1 double bed"
     }
   ]
 }

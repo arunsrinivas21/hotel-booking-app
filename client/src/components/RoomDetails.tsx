@@ -38,8 +38,6 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
 
   const { checkInDate, checkOutDate, numberOfPersons, numberOfRooms, setCheckInDate, setCheckOutDate, setNumberOfPersons, setNumberOfRooms } = useAppContext();
 
-  console.log(checkInDate, checkOutDate, numberOfPersons, numberOfRooms, 'poland123');
-
   useEffect(() => {
     if (params.roomId) {
       const fetchData = async () => {
@@ -189,6 +187,10 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
                         position: 'top-right'
                       });
                       setConfirmReservationFlag(false);
+                      setCheckInDate('');
+                      setCheckOutDate('');
+                      setNumberOfPersons(1);
+                      setNumberOfRooms(1);
                       navigate('/');
                       return;
                     } catch (err: any) {
