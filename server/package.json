@@ -1,0 +1,21 @@
+{
+  "name": "server-side-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsc && node dist/index.js"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "lowdb": "^7.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17"
+  }
+}
