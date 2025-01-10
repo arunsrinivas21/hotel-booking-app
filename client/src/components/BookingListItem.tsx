@@ -54,7 +54,6 @@ const HotelListItem: React.FC<HotelListItemProps> = ({
     <div>
       <Card fluid>
         {hotelsData?.map((hotel) => {
-          console.log(hotel, 'yahoo123');
           return (
             <Grid stackable style={{ padding: '10px' }}>
               {/* Image Section */}
