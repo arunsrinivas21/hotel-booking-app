@@ -39,7 +39,7 @@ const PORT = 5000;
 app.use(express.json());
 app.use(cors());
 
-// Function to initialize database with dynamic IDs
+// Function to initialize database with dynamic IDs - If we add only hotel objects in DB.json, when initializing the DB, adding ids to those objects
 const initializeDatabase = async () => {
   await db.read();
 
@@ -56,7 +56,6 @@ const initializeDatabase = async () => {
 };
 
 // Routes
-
 // 1. GET - Return all hotels
 app.get("/hotels", async (req: Request, res: Response) => {
   await db.read();
@@ -66,7 +65,7 @@ app.get("/hotels", async (req: Request, res: Response) => {
   });
 });
 
-// 1. GET - Return all hotels
+// 2. GET - Return all booked hotels
 app.get("/booked-hotels", async (req: Request, res: Response) => {
   await db.read();
   const data = db.data?.hotels || [];
@@ -78,7 +77,7 @@ app.get("/booked-hotels", async (req: Request, res: Response) => {
   });
 });
 
-// 2. GET - Return a hotel by ID
+// 3. GET - Return a hotel by ID
 app.get("/hotels/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
   await db.read();
@@ -92,7 +91,7 @@ app.get("/hotels/:id", async (req: Request, res: Response) => {
   }
 });
 
-// 3. PUT - Update bookingStatus and bookDetails by ID
+// 4. PUT - Update bookingStatus and bookDetails by ID
 app.put("/hotels/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
   const { bookingStatus, bookDetails } = req.body;
@@ -110,6 +109,7 @@ app.put("/hotels/:id", async (req: Request, res: Response) => {
   }
 });
 
+// 5. Add a new hotel object to the DB 
 app.post("/hotels", async (req: Request, res: Response) => {
   const newHotelObj = { ...req.body };
 
