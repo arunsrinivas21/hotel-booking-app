@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Icon, Image, Label, Button, Grid, Header } from 'semantic-ui-react';
+import { Card, Image, Button, Grid, Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import axios, { AxiosResponse } from 'axios';
 import { HotelsListApiResponse, Hotel } from '../types';
@@ -47,14 +47,14 @@ const HotelList: React.FC = () => {
           {hotelsData.map((hotel: Hotel, index: number) => (
             <Grid.Column key={index}>
               <Card fluid className="hotel-card">
-                <Image src={`hotel${index+1 <= 8 ? index+1 : 1}.jpg`} wrapped ui={false} alt={hotel.name} />
+                <Image src={`hotel${index + 1 <= 8 ? index + 1 : 1}.jpg`} wrapped ui={false} alt={hotel.name} />
                 <Card.Content className="card-content">
                   <Card.Header>
                     {hotel.name}
                   </Card.Header>
                   <Card.Meta>
                     {hotel.location} - &nbsp;
-                    <a href={hotel.googleMapsUrl} target='_blank' style={{ color: 'green' }}>Show on map</a>
+                    <a href={hotel.googleMapsUrl} target='_blank' rel='noreferrer' style={{ color: 'green' }}>Show on map</a>
                   </Card.Meta>
                   <Card.Description>
                     <Header as='h4'>{hotel.category}</Header>
@@ -70,11 +70,11 @@ const HotelList: React.FC = () => {
                 </Card.Content>
                 <Card.Content extra className="card-extra">
                   <div className='ui two buttons'>
-                  <Link to={`/room-details/${hotel.id}`} style={{ color: '#1e70bf', width: '100%' }}>
-                    <Button basic color='blue' floated='right' style={{ width: '100%' }}>
-                      Check this room
-                    </Button>
-                  </Link>
+                    <Link to={`/room-details/${hotel.id}`} style={{ color: '#1e70bf', width: '100%' }}>
+                      <Button basic color='blue' floated='right' style={{ width: '100%' }}>
+                        Check this room
+                      </Button>
+                    </Link>
                   </div>
                 </Card.Content>
               </Card>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Header, Image } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import NavigationMenu from './NavigationMenu';
 import BookingDetails from './RoomOptions';
 import Filters from './Filters';

@@ -57,7 +57,6 @@ const RoomOptions: React.FC = () => {
     const date = e.target.value;
     console.log(date, 'date123')
     setCheckInDate(date);
-    // Clear check-out date when check-in date changes
     setCheckOutDate('');
   };
 

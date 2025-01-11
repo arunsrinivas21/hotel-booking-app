@@ -74,7 +74,7 @@ const HotelBookingList: React.FC = () => {
                     ))}
                   </List> */}
                   <p style={{ color: "brown", marginTop: "1rem" }}>
-                    <a href={hotel.googleMapsUrl} target='_blank'>Open in Google Maps</a>
+                    <a href={hotel.googleMapsUrl} target='_blank' rel='noreferrer'>Open in Google Maps</a>
                   </p>
                 </Grid.Column>
 

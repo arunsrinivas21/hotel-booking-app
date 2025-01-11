@@ -3,7 +3,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   Container,
   Grid,
-  Image,
   Header,
   Icon,
   Segment,
@@ -128,7 +127,7 @@ const HotelDetails: React.FC = () => {
                   <Icon name="map marker alternate" />
                   {hotelData.address}
                 </Segment>
-                <a href={hotelData.googleMapsUrl} target="_blank">
+                <a href={hotelData.googleMapsUrl} target="_blank" rel='noreferrer'>
                   <Button
                     color="blue"
                     content="Show on map"
