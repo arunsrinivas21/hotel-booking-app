@@ -57,14 +57,14 @@ API endpoints -
 
 ## UI Screenshots 
 
-#### Home Page Screenshot 1 
-![Home Page - 1](screenshots/home-page-1.png)
+#### Hotels Losting Page Screenshot 1 
+![Home Page - 1](screenshots/hotels-listing-page-1.png)
 
-#### Home Page Screenshot 2
-![Home Page - 2](screenshots/home-page-1.png)
+#### Hotels Losting Page Screenshot 2
+![Home Page - 2](screenshots/hotels-listing-page-2.png)
 
-#### Home Page Screenshot 3
-![Home Page - 3](screenshots/home-page-1.png)
+#### Hotels Losting Page Screenshot 3
+![Home Page - 3](screenshots/hotels-listing-page-3.png)
 
 #### Hotel Details Page Screenshot 1
 ![Hotel Details Page - 1](screenshots/hotel-details-page-1.png)

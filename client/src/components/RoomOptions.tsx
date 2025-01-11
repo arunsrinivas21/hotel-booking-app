@@ -65,7 +65,7 @@ const RoomOptions: React.FC = () => {
     <Grid stackable columns={4}>
       <Grid.Row>
         <Grid.Column width={4}>
-          <InputLabel>Check In Data:</InputLabel>
+          <InputLabel>Check In Date:</InputLabel>
           <Input 
             type="date" 
             value={checkInDate} 
@@ -84,7 +84,7 @@ const RoomOptions: React.FC = () => {
           />
         </Grid.Column>
         <Grid.Column width={4}>
-          <InputLabel>Check Out Data:</InputLabel>
+          <InputLabel>Check Out Date:</InputLabel>
           <Input 
             type="date" 
             value={checkOutDate} 
@@ -105,7 +105,7 @@ const RoomOptions: React.FC = () => {
           />
         </Grid.Column>
         <Grid.Column width={4}>
-          <InputLabel>No of persons:</InputLabel>
+          <InputLabel>Number of Persons:</InputLabel>
           <Dropdown 
             placeholder='No of Persons' 
             fluid 
@@ -116,7 +116,7 @@ const RoomOptions: React.FC = () => {
           />
         </Grid.Column>
         <Grid.Column width={4}>
-          <InputLabel>No of rooms:</InputLabel>
+          <InputLabel>Number of Rooms:</InputLabel>
           <Dropdown 
             placeholder='No of Rooms' 
             fluid 

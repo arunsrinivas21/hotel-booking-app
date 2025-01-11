@@ -37,13 +37,8 @@
       "googleMapsUrl": "https://maps.app.goo.gl/kHat694Fxbhx7kav7",
       "category": "5 stars",
       "bedType": "1 queen size bed + 1 single bed",
-      "bookingStatus": true,
-      "bookDetails": {
-        "checkInDate": "2025-01-22",
-        "checkOutDate": "2025-01-31",
-        "numberOfPersons": 1,
-        "numberOfRooms": 1
-      }
+      "bookingStatus": false,
+      "bookDetails": {}
     },
     {
       "id": "cb3565ad-8572-4f3c-aa7d-64a8a1789424",
@@ -103,13 +98,8 @@
       "googleMapsUrl": "https://www.google.com/travel/hotels/s/hoqN9t31k5kb8Ykf7",
       "category": "5 stars",
       "bedType": "1 queen size bed + 1 single bed",
-      "bookingStatus": true,
-      "bookDetails": {
-        "checkInDate": "2025-02-10",
-        "checkOutDate": "2025-02-15",
-        "numberOfPersons": 2,
-        "numberOfRooms": 1
-      }
+      "bookingStatus": false,
+      "bookDetails": {}
     },
     {
       "id": "341dcc93-09fc-4bec-a7f3-62e9c0b65b76",
@@ -145,13 +135,48 @@
       "googleMapsUrl": "https://maps.app.goo.gl/AM4qda6hzBMu4Bz48",
       "category": "3 stars",
       "bedType": "1 double bed",
-      "bookingStatus": true,
-      "bookDetails": {
-        "checkInDate": "2025-01-16",
-        "checkOutDate": "2025-01-23",
-        "numberOfPersons": 3,
-        "numberOfRooms": 2
-      }
+      "bookingStatus": false,
+      "bookDetails": {}
+    },
+    {
+      "id": "d185a883-8e47-45c3-9a59-b96b2afa5028",
+      "name": "Rahul Hotel",
+      "description": "Located at the best location of Bangalore - Bannerghetta Road, Rahul Hotel offers prime connectivity and superb experience",
+      "price": 15999,
+      "location": "Bangalore",
+      "address": "Bannerghetta Road, Bangalore - 560032",
+      "facilities": [
+        "Free Parking",
+        "Smoking Rooms",
+        "Wi-Fi",
+        "3-course meal"
+      ],
+      "roomsStatus": "20 rooms available",
+      "googleMapsUrl": "https://maps.app.goo.gl/wEMmaZC61jSFugfM6",
+      "category": "4 stars",
+      "bedType": "2 single beds or 1 double bed",
+      "bookingStatus": false,
+      "bookDetails": {}
+    },
+    {
+      "id": "95db11d2-5ae9-4a25-abd8-75248c5bdeb4",
+      "name": "Creative Recreation Hotel",
+      "description": "Mumbai's new landmark is this hotel - The Creative Recreation Hotel. Check out the hotel for the best staying experience",
+      "price": 55555,
+      "location": "Mumbai",
+      "address": "Dalal Street, Mumbai - 987354",
+      "facilities": [
+        "Free Airport pick-up and drop",
+        "Family Rooms",
+        "Free Wi-Fi",
+        "Chef Specials"
+      ],
+      "roomsStatus": "Only last 5 rooms available",
+      "googleMapsUrl": "https://maps.app.goo.gl/wEMmaZC61jSFugfM6",
+      "category": "5 stars",
+      "bedType": "2 single beds or 1 queen size bed",
+      "bookingStatus": false,
+      "bookDetails": {}
     }
   ]
 }

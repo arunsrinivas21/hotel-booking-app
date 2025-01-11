@@ -177,7 +177,7 @@ const HotelBookingList: React.FC = () => {
           </Modal.Actions>
         </Modal>
         </Card>
-      ) : !loading && (<h3 style={{ textAlign: 'center' }}>No Data Available</h3>)}
+      ) : !loading && (<h3 style={{ textAlign: 'center' }}>No Bookings Available</h3>)}
     </div>
   );
 };
