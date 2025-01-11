@@ -8,6 +8,8 @@ const BookingHistoryLink = styled(Link)<{ isBookingHistoryPage?: boolean; }>`
   font-weight: ${props => props.isBookingHistoryPage === true ? 'bold' : 'normal'};
 
   font-size: 16px;
+  position: relative;
+  bottom: 8px;
 
   &:hover {
     text-decoration: underline;
@@ -23,12 +25,12 @@ const NavigationMenu: React.FC = () => {
   }, [location]);
   return (
     <Grid stackable columns={2} style={{ borderBottom: '2px solid #f3f3f3' }}>
-      <Grid.Column width={8}>
+      <Grid.Column width={6}>
         <Link to='/'>
           <Header as='h2'>PA Hotel Booking</Header>
         </Link>
       </Grid.Column>
-      <Grid.Column width={8} style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+      <Grid.Column width={6} floated='right' textAlign='right'>
         <BookingHistoryLink 
           to="/booking-history" 
           isBookingHistoryPage={isBookingHistoryPage}

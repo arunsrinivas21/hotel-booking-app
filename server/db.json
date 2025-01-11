@@ -184,6 +184,24 @@
       "bedType": "2 single beds or 1 queen size bed",
       "bookingStatus": false,
       "bookingDetails": {}
+    },
+    {
+      "id": "e3cf6196-f887-4ca8-8c55-3f8e575beaf8",
+      "name": "TTD Hotel",
+      "description": "This hotel is one of the hotels maintained by the TTD Devasthanams. Decorated with the 10 avatars of Maha Vishnu, they artistic master piece is a breeze to stay.",
+      "price": 23999,
+      "location": "Hyderabad",
+      "address": "Gachibowli Road, Telangana - 678392",
+      "facilities": [
+        "Free Airport pick-up and drop",
+        "Family Rooms",
+        "Free Wi-Fi",
+        "No Smoking Policy"
+      ],
+      "roomsStatus": "Only last 2 rooms available",
+      "googleMapsUrl": "https://maps.app.goo.gl/wEMmaZC61jSFugfM6",
+      "category": "5 stars",
+      "bedType": "2 single beds or 1 full size bed"
     }
   ]
 }

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <Grid divided stackable>
           <Grid.Row>
             <Grid.Column width={16} style={{ textAlign: 'center' }}>
-              <Header as="h4">
+              <Header as="h3">
                 About this project
               </Header>
               <p>
