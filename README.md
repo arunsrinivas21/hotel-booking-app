@@ -38,7 +38,8 @@ There are 3 main pages in the client-side
 - Once the hotel is booked/cancelled, a toast message notification will be displayed to the user
 - Static images in `public` folder are used to display the hotel images
 
-- Allow reservation of a hotel room only when check in and check out dates are selected 
+- Allow reservation of a hotel room only when check in and check out dates are selected
+- The minimum check in date will be today. Past dates cannot be selected
 - The check out date will always be greater than the check in date 
 - Once a hotel room booking is cancelled, the booking history will be updated instantly
 - DB and UI are in sync based on user actions

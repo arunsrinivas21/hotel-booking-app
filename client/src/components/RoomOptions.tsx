@@ -42,6 +42,15 @@ const RoomOptions: React.FC = () => {
     ref.current?.showPicker();
   };
 
+  const getTodayDate = (): string => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  };
+
   const getNextDate = (dateString: string): string => {
     if (dateString) {
       const date = new Date(dateString);
@@ -70,6 +79,7 @@ const RoomOptions: React.FC = () => {
             onChange={handleCheckInChange} 
             placeholder="Check-in Date"
             style={{ width: '100%' }}
+            min={getTodayDate()}
             icon={
               <Popup 
                 trigger={<Icon name='calendar' link onClick={() => openDatePicker(checkInInputRef)} />}
