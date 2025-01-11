@@ -4,9 +4,9 @@ Simple Full-Stack application to book hotel rooms
 
 ## Technologies Used
 
-Frontend - React JS + Typescript
-Backend - Node JS + Typescript
-Database - Low DB
+- Frontend - React JS + Typescript
+- Backend - Node JS + Typescript
+- Database - Low DB
 
 ## Project Structure 
 
@@ -48,14 +48,14 @@ There are 3 main pages in the client-side
 
 API endpoints - 
 
-- GET - returns all hotels 
-- GET - return a hotel object based on the `id`
-- GET - return all booked hotels
-- POST - create a new hotel using the request body 
-- PUT - update the booking status and details (booking / cancelled)
-- DELETE - delete a hotel based on the `id`
+- GET /hotels - returns all hotels 
+- GET /hotels/:id - return a hotel object based on the `id`
+- GET /hotels/booked-hotels - return all booked hotels
+- POST /hotels - create a new hotel using the request body 
+- PUT /hotels/:id - update the booking status and details (booking/cancelled) based on `id`
+- DELETE /hotels/:id - delete a hotel based on the `id`
 
-## API Decumentation
+## API Documentation
 
 For detailed API documentation, please see [API.md](API.md)
 
