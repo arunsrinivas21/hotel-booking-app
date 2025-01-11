@@ -55,7 +55,6 @@ const RoomOptions: React.FC = () => {
   // Handle check-in date change
   const handleCheckInChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const date = e.target.value;
-    console.log(date, 'date123')
     setCheckInDate(date);
     setCheckOutDate('');
   };

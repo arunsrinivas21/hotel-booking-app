@@ -18,7 +18,6 @@ const HotelList: React.FC = () => {
       try {
         setLoading(true);
         const response: AxiosResponse<HotelsListApiResponse> = await axios.get("http://localhost:5000/hotels");
-        console.log(response.data, 'arun')
         if (selectedFilterLocation !== '') {
           const filteredHotels = response.data.data.filter((hotel: Hotel) => {
             return hotel.location.toLowerCase() === selectedFilterLocation.toLowerCase();

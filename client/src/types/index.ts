@@ -11,7 +11,7 @@ export interface Hotel {
   category: string;
   bedType: string;
   bookingStatus?: boolean;
-  bookDetails?: Record<string, any>;
+  bookingDetails?: Record<string, any>;
   rating?: number;
 }
 

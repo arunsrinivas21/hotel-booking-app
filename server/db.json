@@ -38,7 +38,7 @@
       "category": "5 stars",
       "bedType": "1 queen size bed + 1 single bed",
       "bookingStatus": false,
-      "bookDetails": {}
+      "bookingDetails": {}
     },
     {
       "id": "cb3565ad-8572-4f3c-aa7d-64a8a1789424",
@@ -57,7 +57,14 @@
       "roomsStatus": "5 rooms available",
       "googleMapsUrl": "https://maps.app.goo.gl/kNhtyMWWiHzNmN3n8",
       "category": "5 stars",
-      "bedType": "1 queen size bed + 2 single beds"
+      "bedType": "1 queen size bed + 2 single beds",
+      "bookingStatus": true,
+      "bookingDetails": {
+        "checkInDate": "2025-01-30",
+        "checkOutDate": "2025-02-06",
+        "numberOfPersons": 1,
+        "numberOfRooms": 1
+      }
     },
     {
       "id": "4e672657-3522-4230-a902-ef8b738a1aae",
@@ -99,7 +106,7 @@
       "category": "5 stars",
       "bedType": "1 queen size bed + 1 single bed",
       "bookingStatus": false,
-      "bookDetails": {}
+      "bookingDetails": {}
     },
     {
       "id": "341dcc93-09fc-4bec-a7f3-62e9c0b65b76",
@@ -136,7 +143,7 @@
       "category": "3 stars",
       "bedType": "1 double bed",
       "bookingStatus": false,
-      "bookDetails": {}
+      "bookingDetails": {}
     },
     {
       "id": "d185a883-8e47-45c3-9a59-b96b2afa5028",
@@ -156,7 +163,7 @@
       "category": "4 stars",
       "bedType": "2 single beds or 1 double bed",
       "bookingStatus": false,
-      "bookDetails": {}
+      "bookingDetails": {}
     },
     {
       "id": "95db11d2-5ae9-4a25-abd8-75248c5bdeb4",
@@ -176,7 +183,7 @@
       "category": "5 stars",
       "bedType": "2 single beds or 1 queen size bed",
       "bookingStatus": false,
-      "bookDetails": {}
+      "bookingDetails": {}
     }
   ]
 }

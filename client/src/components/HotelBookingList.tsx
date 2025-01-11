@@ -86,16 +86,16 @@ const HotelBookingList: React.FC = () => {
                   <Segment>
                     <List style={{ textAlign: 'left' }}>
                       <List.Item>
-                        Check In Date: {hotel?.bookDetails?.checkInDate}
+                        Check In Date: {hotel?.bookingDetails?.checkInDate}
                       </List.Item>
                       <List.Item>
-                        Check Out Date: {hotel?.bookDetails?.checkOutDate}
+                        Check Out Date: {hotel?.bookingDetails?.checkOutDate}
                       </List.Item>
                       <List.Item>
-                        Number of Persons: {hotel?.bookDetails?.numberOfPersons}
+                        Number of Persons: {hotel?.bookingDetails?.numberOfPersons}
                       </List.Item>
                       <List.Item>
-                        Number of Rooms: {hotel?.bookDetails?.numberOfRooms}
+                        Number of Rooms: {hotel?.bookingDetails?.numberOfRooms}
                       </List.Item>
                     </List>
                   </Segment>
@@ -140,7 +140,7 @@ const HotelBookingList: React.FC = () => {
                     setLoading(true);
                     const response: AxiosResponse<HotelApiResponse> = await axios.put(`http://localhost:5000/hotels/${selectedHotelId}`, {
                       bookingStatus: false,
-                      bookDetails: {}
+                      bookingDetails: {}
                     });
                     fetchData();
                     toast.success('Your booking was sucessfully cancelled', {

@@ -200,7 +200,7 @@ const HotelDetails: React.FC = () => {
                       setLoading(true);
                       const response: AxiosResponse<HotelApiResponse> = await axios.put(`http://localhost:5000/hotels/${params.roomId}`, {
                         bookingStatus: true,
-                        bookDetails: {
+                        bookingDetails: {
                           checkInDate,
                           checkOutDate,
                           numberOfPersons,

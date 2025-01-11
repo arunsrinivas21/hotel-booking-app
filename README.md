@@ -18,7 +18,11 @@ Project repo has 2 folders
 Both the applications are maintained separately. 
 
 - Use `npm install` to install the dependencies in each of the modules 
-- Use `npm start` to run both client and server code separately. 
+- Use `npm start` to run both client and server code separately. (Client - PORT 3000, Server - PORT 5000)
+
+## API Deocumentation
+
+For detailed API documentation, please see [API.md](API.md)
 
 ## Client-Side Pages 
 

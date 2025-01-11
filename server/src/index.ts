@@ -18,7 +18,7 @@ interface Hotel {
   category: string;
   bedType: string;
   bookingStatus?: boolean;
-  bookDetails?: Record<string, any>;
+  bookingDetails?: Record<string, any>;
   rating?: number;
 }
 
@@ -94,13 +94,13 @@ app.get("/hotels/:id", async (req: Request, res: Response) => {
 // 4. PUT - Update bookingStatus and bookDetails by ID
 app.put("/hotels/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
-  const { bookingStatus, bookDetails } = req.body;
+  const { bookingStatus, bookingDetails } = req.body;
 
   await db.read();
   const hotel = db.data?.hotels.find((h) => h.id === id);
   if (hotel) {
     hotel.bookingStatus = bookingStatus;
-    hotel.bookDetails = bookDetails;
+    hotel.bookingDetails = bookingDetails;
 
     await db.write();
     res.json({ message: "Hotel updated successfully", hotel });
