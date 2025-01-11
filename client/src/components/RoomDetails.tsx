@@ -82,7 +82,7 @@ const HotelDetails: React.FC = () => {
           <NavigationMenu />
           <BookingDetails />
           <Grid>
-            <Grid.Column width={4}>
+            <Grid.Column only="mobile" width={16} style={{ textAlign: 'center' }}>
               <Link to='/'>
                 <Button 
                   content='&lt; Back to Hotels Listing'
@@ -90,7 +90,21 @@ const HotelDetails: React.FC = () => {
                 />
               </Link>
             </Grid.Column>
-            <Grid.Column width={8} style={{ textAlign: 'center', alignSelf: 'center' }}>
+            <Grid.Column width={4} only="tablet computer">
+              <Link to='/'>
+                <Button 
+                  content='&lt; Back to Hotels Listing'
+                  color='blue'
+                />
+              </Link>
+            </Grid.Column>
+            <Grid.Column width={16} style={{ textAlign: 'center', alignSelf: 'center' }} only="mobile">
+              <HotelName>
+                {hotelData.name}
+              </HotelName>
+            </Grid.Column>
+
+            <Grid.Column width={8} style={{ textAlign: 'center', alignSelf: 'center' }} only="tablet computer">
               <HotelName>
                 {hotelData.name}
               </HotelName>
@@ -216,7 +230,7 @@ const HotelDetails: React.FC = () => {
                       setCheckOutDate('');
                       setNumberOfPersons(1);
                       setNumberOfRooms(1);
-                      setSelectedFilterLocation('');
+                      setSelectedFilterLocation('All');
                       navigate('/');
                       return;
                     } catch (err: any) {

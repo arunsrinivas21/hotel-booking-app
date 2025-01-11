@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px) {
+  .navigation-menu-part {
+    text-align: center !important;
+  }
+  .back-to-hotels-link {
+    text-align: center;
+  }
+}

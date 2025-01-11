@@ -25,7 +25,7 @@ export const AppContextProvider: React.FC<AppContextProviderProps> = ({ children
   const [checkOutDate, setCheckOutDate] = useState<string>('');
   const [numberOfPersons, setNumberOfPersons] = useState<number>(1);
   const [numberOfRooms, setNumberOfRooms] = useState<number>(1);
-  const [selectedFilterLocation, setSelectedFilterLocation] = useState<string>('');
+  const [selectedFilterLocation, setSelectedFilterLocation] = useState<string>('All');
 
   // The context value
   const value = {

@@ -2,7 +2,7 @@
 
 Simple Full-Stack application to book hotel rooms
 
-This web application is deployed at [https://hotel-booking-9iiaxmj5z-arunsrinivas21s-projects.vercel.app/](https://hotel-booking-9iiaxmj5z-arunsrinivas21s-projects.vercel.app/)
+This web application is deployed at [https://hotel-booking-app-wheat.vercel.app/](https://hotel-booking-app-wheat.vercel.app/)
 
 ## Technologies Used
 

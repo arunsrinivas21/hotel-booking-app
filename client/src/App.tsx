@@ -5,6 +5,7 @@ import Home from './components/Home';
 import About from './components/About';
 import RoomDetails from './components/RoomDetails';
 import BookingHistory from './components/BookingHistory';
+import './App.css';
 
 const App: React.FC = () => {
   return (

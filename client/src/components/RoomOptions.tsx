@@ -116,10 +116,10 @@ const RoomOptions: React.FC = () => {
           <InputLabel>Number of Persons:</InputLabel>
           <Dropdown 
             placeholder='No of Persons' 
-            fluid 
+            fluid
             selection 
             options={personOptions} 
-            value={numberOfPersons} 
+            value={numberOfPersons}
             onChange={(e, { value }) => setNumberOfPersons(value as number)}
           />
         </Grid.Column>

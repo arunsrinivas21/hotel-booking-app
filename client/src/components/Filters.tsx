@@ -6,13 +6,15 @@ const Filters: React.FC = () => {
   const { selectedFilterLocation, setSelectedFilterLocation } = useAppContext();
 
   const locations = [
-    { key: 'All', text: 'All', value: '' },
+    { key: 'All', text: 'All', value: 'All' },
     { key: 'Chennai', text: 'Chennai', value: 'Chennai' },
     { key: 'Bangalore', text: 'Bangalore', value: 'Bangalore' },
     { key: 'Hyderabad', text: 'Hyderabad', value: 'Hyderabad' },
     { key: 'Mumbai', text: 'Mumbai', value: 'Mumbai' },
     { key: 'Delhi', text: 'Delhi', value: 'Delhi' },
   ];
+
+  console.log(selectedFilterLocation, 'arunsrinivas100')
 
   return (
     <Grid stackable columns={2} style={{ justifyContent: 'flex-end' }}>

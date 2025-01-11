@@ -25,12 +25,12 @@ const NavigationMenu: React.FC = () => {
   }, [location]);
   return (
     <Grid stackable columns={2} style={{ borderBottom: '2px solid #f3f3f3' }}>
-      <Grid.Column width={6}>
+      <Grid.Column width={6} className='navigation-menu-part'>
         <Link to='/'>
           <Header as='h2'>PA Hotel Booking</Header>
         </Link>
       </Grid.Column>
-      <Grid.Column width={6} floated='right' textAlign='right'>
+      <Grid.Column width={6} floated='right' textAlign='right' className='navigation-menu-part'>
         <BookingHistoryLink 
           to="/booking-history" 
           isBookingHistoryPage={isBookingHistoryPage}

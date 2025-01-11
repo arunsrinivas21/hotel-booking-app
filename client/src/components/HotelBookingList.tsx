@@ -42,12 +42,14 @@ const HotelBookingList: React.FC = () => {
 
   return (
     <div style={{ marginTop: '20px' }}>
-      <Link to='/'>
-        <Button 
-          content='&lt; Back to Hotels List'
-          color='blue'
-        />
-      </Link>
+      <div className="back-to-hotels-link">
+        <Link to='/'>
+          <Button 
+            content='&lt; Back to Hotels List'
+            color='blue'
+          />
+        </Link>
+      </div>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {hotelsData ? (
