@@ -75,6 +75,9 @@ API endpoints -
 #### Hotel Details Page Screenshot 3
 ![Hotel Details Page - 3](screenshots/hotel-details-page-3.png)
 
+#### Hotel Booking History Page
+![Hotel Booking History Page](screenshots/booking-history-page.png)
+
 
 
 

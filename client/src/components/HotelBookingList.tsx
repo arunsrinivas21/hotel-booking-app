@@ -53,64 +53,66 @@ const HotelBookingList: React.FC = () => {
         <Card fluid>
         {hotelsData?.map((hotel) => {
           return (
-            <Grid stackable style={{ padding: '10px' }} key={hotel?.id}>
-              <Grid.Column width={4}>
-                <Image src={'./hotel1.jpg'} fluid style={{ maxWidth: '100%' }} />
-              </Grid.Column>
+            <div style={{ padding: '15px 10px' }} key={hotel?.id}>
+              <Grid stackable style={{ borderBottom: '1px solid #f3f3f3' }}>
+                <Grid.Column width={4}>
+                  <Image src={'./hotel1.jpg'} fluid style={{ maxWidth: '100%' }} />
+                </Grid.Column>
 
-              <Grid.Column width={8} style={{}}>
-                <Header as="h3" style={{ marginBottom: '0px' }}>{hotel.name}</Header>
-                <Header as="h4" color="blue" style={{ marginTop: '10px' }}>
-                  {hotel.address}
-                </Header>
-                <p>{hotel.category}</p>
-                <p>{hotel.bedType}</p>
-                {/* <List>
-                  {hotel.facilities.map((facility, index) => (
-                    <List.Item key={index}>
-                      {facility}
-                    </List.Item>
-                  ))}
-                </List> */}
-                <p style={{ color: "brown", marginTop: "1rem" }}>
-                  <a href={hotel.googleMapsUrl} target='_blank'>Open in Google Maps</a>
-                </p>
-              </Grid.Column>
+                <Grid.Column width={8} style={{}}>
+                  <Header as="h3" style={{ marginBottom: '0px' }}>{hotel.name}</Header>
+                  <Header as="h4" color="blue" style={{ marginTop: '10px' }}>
+                    {hotel.address}
+                  </Header>
+                  <p>{hotel.category}</p>
+                  <p>{hotel.bedType}</p>
+                  {/* <List>
+                    {hotel.facilities.map((facility, index) => (
+                      <List.Item key={index}>
+                        {facility}
+                      </List.Item>
+                    ))}
+                  </List> */}
+                  <p style={{ color: "brown", marginTop: "1rem" }}>
+                    <a href={hotel.googleMapsUrl} target='_blank'>Open in Google Maps</a>
+                  </p>
+                </Grid.Column>
 
-              <Grid.Column width={4} textAlign="center">
-                <Header as="h4" color="blue">
-                  Booking Confirmed
-                </Header>
+                <Grid.Column width={4} textAlign="center">
+                  <Header as="h4" color="blue">
+                    Booking Confirmed
+                  </Header>
 
-                <Segment>
-                  <List style={{ textAlign: 'left' }}>
-                    <List.Item>
-                      Check In Date: {hotel?.bookDetails?.checkInDate}
-                    </List.Item>
-                    <List.Item>
-                      Check Out Date: {hotel?.bookDetails?.checkOutDate}
-                    </List.Item>
-                    <List.Item>
-                      Number of Persons: {hotel?.bookDetails?.numberOfPersons}
-                    </List.Item>
-                    <List.Item>
-                      Number of Rooms: {hotel?.bookDetails?.numberOfRooms}
-                    </List.Item>
-                  </List>
-                </Segment>
+                  <Segment>
+                    <List style={{ textAlign: 'left' }}>
+                      <List.Item>
+                        Check In Date: {hotel?.bookDetails?.checkInDate}
+                      </List.Item>
+                      <List.Item>
+                        Check Out Date: {hotel?.bookDetails?.checkOutDate}
+                      </List.Item>
+                      <List.Item>
+                        Number of Persons: {hotel?.bookDetails?.numberOfPersons}
+                      </List.Item>
+                      <List.Item>
+                        Number of Rooms: {hotel?.bookDetails?.numberOfRooms}
+                      </List.Item>
+                    </List>
+                  </Segment>
 
-                <Button
-                  color="red"
-                  content="Cancel Booking"
-                  fluid
-                  onClick={() => {
-                    setSelectedHotelName(hotel.name);
-                    setSelectedHotelId(hotel?.id ? hotel.id : '');
-                    setCancelWarning(true);
-                  }}
-                />
-              </Grid.Column>
-            </Grid>
+                  <Button
+                    color="red"
+                    content="Cancel Booking"
+                    fluid
+                    onClick={() => {
+                      setSelectedHotelName(hotel.name);
+                      setSelectedHotelId(hotel?.id ? hotel.id : '');
+                      setCancelWarning(true);
+                    }}
+                  />
+                </Grid.Column>
+              </Grid>
+            </div>
           )
         })}
         <Modal
