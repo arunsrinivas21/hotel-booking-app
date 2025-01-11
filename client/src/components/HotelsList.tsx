@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Image, Button, Grid, Header } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import axios, { AxiosResponse } from 'axios';
+import { AxiosResponse } from 'axios';
+import baseAxios from '../api/api';
 import { HotelsListApiResponse, Hotel } from '../types';
 import { useAppContext } from '../AppContext';
 import './HotelsList.css';
@@ -17,7 +18,7 @@ const HotelList: React.FC = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response: AxiosResponse<HotelsListApiResponse> = await axios.get("http://localhost:5000/hotels");
+        const response: AxiosResponse<HotelsListApiResponse> = await baseAxios.get("/hotels");
         if (selectedFilterLocation !== '') {
           const filteredHotels = response.data.data.filter((hotel: Hotel) => {
             return hotel.location.toLowerCase() === selectedFilterLocation.toLowerCase();

@@ -2,6 +2,8 @@
 
 Simple Full-Stack application to book hotel rooms
 
+This web application is deployed in [https://hotel-booking-9iiaxmj5z-arunsrinivas21s-projects.vercel.app/](https://hotel-booking-9iiaxmj5z-arunsrinivas21s-projects.vercel.app/)
+
 ## Technologies Used
 
 - Frontend - React JS + Typescript

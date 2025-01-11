@@ -14,7 +14,8 @@ import { toast } from 'react-toastify';
 import ImageGallery from './ImageGallery';
 import NavigationMenu from "./NavigationMenu";
 import BookingDetails from './RoomOptions';
-import axios, { AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
+import baseAxios from "../api/api";
 import { Hotel, HotelApiResponse } from "../types";
 import { useAppContext } from '../AppContext';
 import styled from "styled-components";
@@ -54,7 +55,7 @@ const HotelDetails: React.FC = () => {
       const fetchData = async () => {
         try {
           setLoading(true);
-          const response: AxiosResponse<HotelApiResponse> = await axios.get(`http://localhost:5000/hotels/${params.roomId}`);
+          const response: AxiosResponse<HotelApiResponse> = await baseAxios.get(`/hotels/${params.roomId}`);
           setHotelData(response.data.data);
         } catch (err: any) {
           setError("Failed to fetch data");
@@ -198,7 +199,7 @@ const HotelDetails: React.FC = () => {
                   const updateHotelBooking = async () => {
                     try {
                       setLoading(true);
-                      const response: AxiosResponse<HotelApiResponse> = await axios.put(`http://localhost:5000/hotels/${params.roomId}`, {
+                      const response: AxiosResponse<HotelApiResponse> = await baseAxios.put(`/hotels/${params.roomId}`, {
                         bookingStatus: true,
                         bookingDetails: {
                           checkInDate,

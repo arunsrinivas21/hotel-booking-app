@@ -162,7 +162,7 @@
       "googleMapsUrl": "https://maps.app.goo.gl/wEMmaZC61jSFugfM6",
       "category": "4 stars",
       "bedType": "2 single beds or 1 double bed",
-      "bookingStatus": false,
+      "bookingStatus": true,
       "bookingDetails": {}
     },
     {

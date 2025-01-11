@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Card, Grid, Image, Header, Modal, List, Button, Segment } from "semantic-ui-react";
 import { Hotel, HotelsListApiResponse, HotelApiResponse } from "../types";
-import axios, { AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
+import baseAxios from "../api/api";
 import { toast } from 'react-toastify'
 import { Link } from "react-router-dom";
 
@@ -16,7 +17,7 @@ const HotelBookingList: React.FC = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response: AxiosResponse<HotelsListApiResponse> = await axios.get("http://localhost:5000/booked-hotels");
+      const response: AxiosResponse<HotelsListApiResponse> = await baseAxios.get("/booked-hotels");
       if (response?.data?.data?.length > 0) {
         setHotelsData(response.data.data);
       } else {
@@ -138,7 +139,7 @@ const HotelBookingList: React.FC = () => {
                 const updateHotelBooking = async () => {
                   try {
                     setLoading(true);
-                    const response: AxiosResponse<HotelApiResponse> = await axios.put(`http://localhost:5000/hotels/${selectedHotelId}`, {
+                    const response: AxiosResponse<HotelApiResponse> = await baseAxios.put(`/hotels/${selectedHotelId}`, {
                       bookingStatus: false,
                       bookingDetails: {}
                     });
