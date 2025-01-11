@@ -22,7 +22,7 @@ const NavigationMenu: React.FC = () => {
     setIsBookingHistoryPage(location.pathname === '/booking-history');
   }, [location]);
   return (
-    <Grid stackable columns={2}>
+    <Grid stackable columns={2} style={{ borderBottom: '2px solid #f3f3f3' }}>
       <Grid.Column width={8}>
         <Link to='/'>
           <Header as='h2'>PA Hotel Booking</Header>

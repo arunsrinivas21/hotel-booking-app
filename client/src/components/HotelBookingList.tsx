@@ -5,7 +5,7 @@ import axios, { AxiosResponse } from "axios";
 import { toast } from 'react-toastify'
 import { Link } from "react-router-dom";
 
-const HotelListItem: React.FC = () => {
+const HotelBookingList: React.FC = () => {
   const [hotelsData, setHotelsData] = useState<Array<Hotel> | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
@@ -180,4 +180,4 @@ const HotelListItem: React.FC = () => {
   );
 };
 
-export default HotelListItem;
+export default HotelBookingList;

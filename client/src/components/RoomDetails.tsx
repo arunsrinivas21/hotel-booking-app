@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   Container,
   Grid,
@@ -19,16 +19,18 @@ import axios, { AxiosResponse } from "axios";
 import { Hotel, HotelApiResponse } from "../types";
 import { useAppContext } from '../AppContext';
 import styled from "styled-components";
-
-interface HotelDetailsprops {
-  
-}
+import Footer from "./Footer";
 
 const WarningHelperMessage = styled.p`
   color: red;
 `;
 
-const HotelDetails: React.FC<HotelDetailsprops> = () => {
+const HotelName = styled.span`
+  font-size: 25px;
+  font-weight: bold;
+`;
+
+const HotelDetails: React.FC = () => {
   const navigate = useNavigate();
   const params = useParams();
   const [confirmReservationFlag, setConfirmReservationFlag] = useState(false);
@@ -36,7 +38,17 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
 
-  const { checkInDate, checkOutDate, numberOfPersons, numberOfRooms, setCheckInDate, setCheckOutDate, setNumberOfPersons, setNumberOfRooms, setSelectedFilterLocation } = useAppContext();
+  const { 
+    checkInDate, 
+    checkOutDate, 
+    numberOfPersons, 
+    numberOfRooms, 
+    setCheckInDate, 
+    setCheckOutDate, 
+    setNumberOfPersons, 
+    setNumberOfRooms, 
+    setSelectedFilterLocation 
+  } = useAppContext();
 
   useEffect(() => {
     if (params.roomId) {
@@ -44,7 +56,6 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
         try {
           setLoading(true);
           const response: AxiosResponse<HotelApiResponse> = await axios.get(`http://localhost:5000/hotels/${params.roomId}`);
-          console.log(response.data, 'arun')
           setHotelData(response.data.data);
         } catch (err: any) {
           setError("Failed to fetch data");
@@ -67,12 +78,27 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {hotelData ? (
-        <Container style={{ marginTop: '2em' }}>
+        <Container style={{ marginTop: '1em' }}>
           <NavigationMenu />
           <BookingDetails />
-          <Header as="h1" textAlign="center" style={{ marginTop: "1rem" }}>
-            {hotelData.name}
-          </Header>
+          <Grid>
+            <Grid.Column width={4}>
+              <Link to='/'>
+                <Button 
+                  content='&lt; Back to Hotels Listing'
+                  color='blue'
+                />
+              </Link>
+            </Grid.Column>
+            <Grid.Column width={8} style={{ textAlign: 'center', alignSelf: 'center' }}>
+              <HotelName>
+                {hotelData.name}
+              </HotelName>
+            </Grid.Column>
+            <Grid.Column width={4}>
+
+            </Grid.Column>
+          </Grid>
           <Grid stackable>
             <Grid.Row>
               <ImageGallery />
@@ -182,7 +208,6 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
                           numberOfRooms,
                         }
                       });
-                      console.log(response.data, 'arun555')
                       toast.success('Your booking was successful!', {
                         position: 'top-right'
                       });
@@ -205,19 +230,13 @@ const HotelDetails: React.FC<HotelDetailsprops> = () => {
                   };
               
                   updateHotelBooking();
-
-                  // toast.success('Your booking was successful!', {
-                  //   position: 'top-right'
-                  // });
-                  // setConfirmReservationFlag(false);
-                  // navigate('/');
-                  // return;
                 }}
               />
             </Modal.Actions>
           </Modal>
         </Container>) : (!loading && <p>No Data Available</p>)
         }
+        <Footer />
     </div>
   );
 };

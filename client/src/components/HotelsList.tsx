@@ -53,7 +53,7 @@ const HotelList: React.FC = () => {
                     {hotel.name}
                   </Card.Header>
                   <Card.Meta>
-                    {hotel.location} - 
+                    {hotel.location} - &nbsp;
                     <a href={hotel.googleMapsUrl} target='_blank' style={{ color: 'green' }}>Show on map</a>
                   </Card.Meta>
                   <Card.Description>

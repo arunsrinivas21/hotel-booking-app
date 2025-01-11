@@ -1,26 +1,25 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Grid, Input, Dropdown, Icon, Popup, Label } from 'semantic-ui-react';
 import { useAppContext } from '../AppContext';
 import styled from 'styled-components';
 
-interface RoomOptionsProps {
-  // Define your props here if needed
-}
-
 const InputLabel = styled(Label)`
+  font-size: 14px !important;
   background-color: transparent !important;
+  padding-left: 0px !important;
 `;
 
-const RoomOptions: React.FC<RoomOptionsProps> = () => {
-  // const [checkInDate, setCheckInDate] = useState('');
-  // const [checkOutDate, setCheckOutDate] = useState('');
-  // const [numberOfPersons, setNumberOfPersons] = useState(1);
-  // const [numberOfRooms, setNumberOfRooms] = useState(1);
-
-  const { checkInDate, checkOutDate, numberOfPersons, numberOfRooms, setCheckInDate, setCheckOutDate, setNumberOfPersons, setNumberOfRooms } = useAppContext();
-
-
-  
+const RoomOptions: React.FC = () => {
+  const { 
+    checkInDate, 
+    checkOutDate, 
+    numberOfPersons, 
+    numberOfRooms, 
+    setCheckInDate, 
+    setCheckOutDate, 
+    setNumberOfPersons, 
+    setNumberOfRooms 
+  } = useAppContext();
 
   const personOptions = [
     { key: '1', text: '1', value: 1 },
@@ -36,25 +35,12 @@ const RoomOptions: React.FC<RoomOptionsProps> = () => {
     { key: '2', text: '2', value: 2 },
   ];
 
-  // Use non-null assertion operator or ensure the ref is checked before use
   const checkInInputRef = useRef<HTMLInputElement>(null!);
   const checkOutInputRef = useRef<HTMLInputElement>(null!);
 
-  // Function to open the date picker
   const openDatePicker = (ref: React.RefObject<HTMLInputElement>) => {
-    // Using optional chaining to safely call showPicker
     ref.current?.showPicker();
   };
-
-  // Effect to update the min attribute of check-out date
-  // useEffect(() => {
-  //   if (checkOutInputRef.current && checkInDate) {
-  //     const nextDay = new Date(checkInDate);
-  //     nextDay.setDate(nextDay.getDate() + 1);
-  //     const minDate = nextDay.toISOString().split('T')[0];
-  //     checkOutInputRef.current.min = minDate;
-  //   }
-  // }, [checkInDate]);
 
   const getNextDate = (dateString: string): string => {
     if (dateString) {
@@ -94,7 +80,7 @@ const RoomOptions: React.FC<RoomOptionsProps> = () => {
                 on='hover'
               />
             }
-            // inputRef={checkInInputRef}
+            inputRef={checkInInputRef}
           />
         </Grid.Column>
         <Grid.Column width={4}>

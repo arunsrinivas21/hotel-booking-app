@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React from 'react';
 import { Grid, Dropdown } from 'semantic-ui-react';
 import { useAppContext } from '../AppContext';
 
@@ -15,7 +15,10 @@ const Filters: React.FC = () => {
   ];
 
   return (
-    <Grid stackable columns={1} style={{ justifyContent: 'flex-end' }}>
+    <Grid stackable columns={2} style={{ justifyContent: 'flex-end' }}>
+      <Grid.Column width={10} style={{ alignSelf: 'center' }}>
+        <span style={{ fontSize: '25px', fontWeight: 'bold' }}>{selectedFilterLocation || 'All' } Hotels Listing:</span>
+      </Grid.Column>
       <Grid.Column width={6} style={{ display: 'flex', alignItems: 'center' }}>
         <span>Filters:</span>
         <span style={{ width: '100%', marginLeft: '10px' }}>
